@@ -30,10 +30,12 @@ if(event.currentTarget === event.target) {
 }
 
 render(){
+    const {largeImageURL, tags} = this.props;
+    console.log(this.props)
     return createPortal(
         <Overlay onClick={this.hendleBackdropClick}>
   <ModalBackDrop>
-    <img src="" alt="" />
+    <img src={largeImageURL} alt={tags}/>
   </ModalBackDrop>
 </Overlay>, modalRoot,
     )

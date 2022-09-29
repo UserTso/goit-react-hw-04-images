@@ -1,9 +1,9 @@
 import {Item, Image} from './ImageGalleryItem.styled'
 
-export const ImageGalleryItem = ({id, tags, webformatURL, largeImageURL }) => {
+export const ImageGalleryItem = ({tags, webformatURL, largeImageURL, toggleModal }) => {
 return (
 
-<Item>
+<Item onClick={() => toggleModal(largeImageURL, tags)}>
   <Image src={webformatURL} alt={tags} />
 </Item>
 )
