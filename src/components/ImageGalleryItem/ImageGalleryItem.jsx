@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {Item, Image} from './ImageGalleryItem.styled'
 
 export const ImageGalleryItem = ({tags, webformatURL, largeImageURL, toggleModal }) => {
@@ -8,3 +10,12 @@ return (
 </Item>
 )
 }
+
+
+
+ImageGalleryItem.propTypes = {
+	tags: PropTypes.string.isRequired,
+  webformatURL: PropTypes.string.isRequired,
+  largeImageURL: PropTypes.string.isRequired,
+  toggleModal: PropTypes.func.isRequired,
+  };
