@@ -46,4 +46,6 @@ render(){
 
 Modal.propTypes = {
     onClick: PropTypes.func.isRequired,
+    tags: PropTypes.string.isRequired,
+    largeImageURL: PropTypes.string.isRequired,
 }
