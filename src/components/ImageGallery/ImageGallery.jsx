@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {ImageGalleryItem} from '../ImageGalleryItem';
 import {List} from './ImageGallery.styled';
 import {Button} from '../Button';
@@ -43,8 +44,7 @@ console.log(largeImageURL);
         tags: tags,
       }))
     }
-
-
+    
   render() {
     return (
 <>
@@ -58,14 +58,13 @@ console.log(largeImageURL);
        webformatURL={image.webformatURL} 
        largeImageURL={image.largeImageURL}
        toggleModal={this.toggleModal}>
-
        </ImageGalleryItem>
     )
   })}
- 
-</List>
- {this.state.loading&&<Loading />}
 
+</List>
+
+{this.state.loading&&<Loading />}
 {this.state.images.length ? (<Button onClick={this.props.onClickButtonLoad} />) : null}
 {this.state.showModal && (<Modal largeImageURL={this.state.largeImageURL} tags={this.state.tags} onClose={this.toggleModal} />)}
 
@@ -73,6 +72,12 @@ console.log(largeImageURL);
     )
   }
 
+}
+
+ImageGallery.propTypes ={
+  name: PropTypes.string.isRequired,
+  page: PropTypes.number.isRequired,
+  onClickButtonLoad: PropTypes.func.isRequired,
 }
 
 

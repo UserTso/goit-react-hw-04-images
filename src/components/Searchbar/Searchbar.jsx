@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Header, Form, Button, Input} from './Searchbar.styled';
 import { FcSearch} from 'react-icons/fc';
 import { toast } from 'react-toastify';
@@ -44,6 +45,7 @@ export class Searchbar extends React.Component {
         
                 <Input
                 onChange={this.getInputValue}
+                value={this.state.name}
                   type="text"
                   autocomplete="off"
                   autoFocus
@@ -54,4 +56,8 @@ export class Searchbar extends React.Component {
           );
     }
  
+}
+
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 }

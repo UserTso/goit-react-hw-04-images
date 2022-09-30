@@ -1,5 +1,6 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
+import PropTypes from 'prop-types';
 import {Overlay,ModalBackDrop} from './Modal.styled';
 
 
@@ -41,4 +42,8 @@ render(){
     )
 }
 
+}
+
+Modal.propTypes = {
+    onClick: PropTypes.func.isRequired,
 }
