@@ -4,8 +4,6 @@ import {Header, Form, Button, Input} from './Searchbar.styled';
 import { FcSearch} from 'react-icons/fc';
 import { toast } from 'react-toastify';
 
-
-
 export function Searchbar({onSubmit}) {
 const [name, setName] = useState('');
 
@@ -49,10 +47,7 @@ return (
                 </Form>
               </Header>
             );
-
-
 }
-
 
 Searchbar.propTypes = {
   onSubmit: PropTypes.func.isRequired,

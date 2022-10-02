@@ -37,7 +37,6 @@ export class ImageGallery extends React.Component{
   }
 
     toggleModal = (largeImageURL, tags) => {
-console.log(largeImageURL);
       this.setState(({showModal}) => ({
         showModal: !showModal,
         largeImageURL: largeImageURL,
