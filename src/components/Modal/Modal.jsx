@@ -42,5 +42,5 @@ if(event.currentTarget === event.target) {
 Modal.propTypes = {
     onClick: PropTypes.func,
     tags: PropTypes.string.isRequired,
-    largeImageURL: PropTypes.string.isRequired,
+    largeImageURL: PropTypes.string,
 }
